@@ -1,0 +1,9 @@
+#!/bin/bash
+
+set -e
+set -u
+
+docker container run --rm \
+    -v "$PWD:$PWD" \
+    -w "$PWD" \
+    m5d215/optipng:latest "$@"
